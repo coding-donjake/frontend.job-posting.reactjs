@@ -5,7 +5,7 @@ import { PrimaryContainer } from "../../../components/widgets/Containers";
 import { RegularForm } from "../../../components/widgets/Forms";
 import { PrimaryInput } from "../../../components/widgets/Inputs";
 import {
-  PrimaryButton,
+  DangerButton,
   SecondaryButton,
 } from "../../../components/widgets/Buttons";
 import { faChevronLeft, faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
@@ -58,7 +58,7 @@ const CreateScreen = () => {
 
     try {
       setProcessing(true);
-      const response = await fetch("/internship/create", {
+      const response = await fetch("/job-post/create", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,7 +66,7 @@ const CreateScreen = () => {
         },
         body: JSON.stringify({
           password: formData.password,
-          internship: {
+          jobPost: {
             title: formData.title,
             description: formData.description,
             slots: parseFloat(formData.slots),
@@ -84,7 +84,7 @@ const CreateScreen = () => {
         return;
       }
       if (response.ok) {
-        toast.success("Internship created.");
+        toast.success("Job Post created.");
         navigate(-1);
         return;
       }
@@ -98,7 +98,7 @@ const CreateScreen = () => {
   };
 
   useEffect(() => {
-    document.title = "Create Internship";
+    document.title = "Create Job Post";
   }, []);
 
   return (
@@ -106,7 +106,7 @@ const CreateScreen = () => {
       leftPanel={<CompanyNavigation />}
       body={
         <div className="p-4">
-          <h1>Create Internship</h1>
+          <h1>Create Job Post</h1>
           <hr />
           <PrimaryContainer
             actions={[
@@ -168,7 +168,7 @@ const CreateScreen = () => {
                   },
                 ]}
                 actions={[
-                  <PrimaryButton
+                  <DangerButton
                     type="submit"
                     icon={<FontAwesomeIcon icon={faFloppyDisk} />}
                     text="Save"

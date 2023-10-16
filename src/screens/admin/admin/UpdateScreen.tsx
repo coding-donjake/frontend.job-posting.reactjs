@@ -3,7 +3,7 @@ import { faChevronLeft, faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BlockScreen from "../../../components/BlockScreen";
 import {
-  PrimaryButton,
+  DangerButton,
   SecondaryButton,
 } from "../../../components/widgets/Buttons";
 import { PrimaryContainer } from "../../../components/widgets/Containers";
@@ -300,7 +300,7 @@ const UpdateScreen = () => {
                     },
                   ]}
                   actions={[
-                    <PrimaryButton
+                    <DangerButton
                       type="submit"
                       icon={<FontAwesomeIcon icon={faFloppyDisk} />}
                       text="Save"

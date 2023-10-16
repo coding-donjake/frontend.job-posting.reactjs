@@ -5,7 +5,7 @@ import { PrimaryContainer } from "../../../components/widgets/Containers";
 import { RegularForm } from "../../../components/widgets/Forms";
 import { PrimaryInput } from "../../../components/widgets/Inputs";
 import {
-  PrimaryButton,
+  DangerButton,
   SecondaryButton,
 } from "../../../components/widgets/Buttons";
 import { faChevronLeft, faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
@@ -247,7 +247,7 @@ const CreateScreen = () => {
                   },
                 ]}
                 actions={[
-                  <PrimaryButton
+                  <DangerButton
                     type="submit"
                     icon={<FontAwesomeIcon icon={faFloppyDisk} />}
                     text="Save"

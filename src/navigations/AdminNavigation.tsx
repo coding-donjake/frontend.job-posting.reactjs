@@ -10,11 +10,7 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  SecondaryButton,
-  DangerButton,
-  PrimaryButton,
-} from "../components/widgets/Buttons";
+import { SecondaryButton, DangerButton } from "../components/widgets/Buttons";
 import { useNavigate } from "react-router-dom";
 
 const AdminNavigation = () => {
@@ -27,7 +23,7 @@ const AdminNavigation = () => {
       title={localStorage.getItem("username")!}
       actions={[
         currentURL.includes(":3000/admin/dashboard") ? (
-          <PrimaryButton
+          <DangerButton
             icon={<FontAwesomeIcon icon={faChartPie} />}
             text="Dashboard"
           />
@@ -39,7 +35,7 @@ const AdminNavigation = () => {
           />
         ),
         currentURL.includes(":3000/admin/companies") ? (
-          <PrimaryButton
+          <DangerButton
             icon={<FontAwesomeIcon icon={faBuilding} />}
             text="Companies"
           />
@@ -51,7 +47,7 @@ const AdminNavigation = () => {
           />
         ),
         currentURL.includes(":3000/admin/admin") ? (
-          <PrimaryButton
+          <DangerButton
             icon={<FontAwesomeIcon icon={faUserGroup} />}
             text="Admin"
           />

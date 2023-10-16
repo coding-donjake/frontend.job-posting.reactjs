@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/banner.png";
 import BlockScreen from "../../components/BlockScreen";
 import {
   faPenToSquare,
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
-  PrimaryButton,
+  DangerButton,
   SecondaryButton,
 } from "../../components/widgets/Buttons";
 import { PrimaryContainer } from "../../components/widgets/Containers";
@@ -94,7 +94,7 @@ const IndexScreen = () => {
                 logo={<img src={Logo} alt="" />}
                 formGroups={[
                   {
-                    name: "Able Hire Company",
+                    name: "Career Pro Company",
                     items: [
                       <PrimaryInput
                         type="text"
@@ -121,7 +121,7 @@ const IndexScreen = () => {
                     text="Register"
                     onClick={() => navigate("register")}
                   />,
-                  <PrimaryButton
+                  <DangerButton
                     type="submit"
                     icon={<FontAwesomeIcon icon={faRightToBracket} />}
                     text="Log In"

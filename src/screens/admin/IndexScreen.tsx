@@ -5,7 +5,7 @@ import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { PrimaryButton } from "../../components/widgets/Buttons";
+import { DangerButton } from "../../components/widgets/Buttons";
 import { PrimaryContainer } from "../../components/widgets/Containers";
 import { TinyForm } from "../../components/widgets/Forms";
 import { PrimaryInput } from "../../components/widgets/Inputs";
@@ -87,7 +87,7 @@ const IndexScreen = () => {
                 logo={<img src={Logo} alt="" />}
                 formGroups={[
                   {
-                    name: "Able Hire Administrator",
+                    name: "Career Pro Administrator",
                     items: [
                       <PrimaryInput
                         type="text"
@@ -109,7 +109,7 @@ const IndexScreen = () => {
                   },
                 ]}
                 actions={[
-                  <PrimaryButton
+                  <DangerButton
                     type="submit"
                     icon={<FontAwesomeIcon icon={faRightToBracket} />}
                     text="Log In"

@@ -15,7 +15,7 @@ import { PrimaryContainer } from "../../../components/widgets/Containers";
 import { RegularForm } from "../../../components/widgets/Forms";
 import { PrimaryInput } from "../../../components/widgets/Inputs";
 import {
-  PrimaryButton,
+  DangerButton,
   SecondaryButton,
 } from "../../../components/widgets/Buttons";
 
@@ -178,7 +178,7 @@ const RemoveScreen = () => {
                     },
                   ]}
                   actions={[
-                    <PrimaryButton
+                    <DangerButton
                       type="submit"
                       icon={<FontAwesomeIcon icon={faCheck} />}
                       text="Confirm"
